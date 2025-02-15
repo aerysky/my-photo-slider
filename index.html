@@ -21,9 +21,6 @@
             <div class="swiper-slide"><img src="https://images.plurk.com/4OtkChBYAH7VG4TPS5sJBZ.jpg" alt="圖片2"></div>
             <div class="swiper-slide"><img src="https://images.plurk.com/6mjZCncTb8XvztXy1Qkl09.jpg" alt="圖片3"></div>
         </div>
-        <!-- 左右按鈕 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
         <!-- 分頁圓點 -->
         <div class="swiper-pagination"></div>
     </div>
@@ -33,7 +30,6 @@
     <script>
         const swiper = new Swiper('.swiper', {
             loop: true,  // 無限循環
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             pagination: { el: '.swiper-pagination', clickable: true },
             autoplay: { delay: 3000 }, // 3 秒自動播放
         });

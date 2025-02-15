@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相簿輪播</title>
+    <!-- 引入 Swiper.js 的 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .swiper { width: 80%; height: 400px; margin: auto; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body>
+    <!-- Swiper 輪播區塊 -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://images.plurk.com/79UnhLHslcO0K9GAhlFoJi.jpg,1"></div>
+            <div class="swiper-slide"><img src="https://images.plurk.com/4OtkChBYAH7VG4TPS5sJBZ.jpg,2"></div>
+            <div class="swiper-slide"><img src="https://images.plurk.com/6mjZCncTb8XvztXy1Qkl09.jpg,3"></div>
+        </div>
+        <!-- 左右按鈕 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- 分頁圓點 -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- 引入 Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,  // 無限循環
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            autoplay: { delay: 3000 }, // 3 秒自動播放
+        });
+    </script>
+</body>
+</html>
